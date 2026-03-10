@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .glow-border {
+    @apply border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.2)];
+  }
+  .glow-text {
+    @apply text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.5)];
+  }
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155; /* slate-700 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* slate-600 */
+}
+
+/* Hide scrollbar utility class */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
